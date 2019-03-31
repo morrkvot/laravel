@@ -14,7 +14,7 @@ class UserPageController extends Controller
 		$bbs = Bbs::all()->where('user_id', $name); 
 
 		//return $bbs to userpage.blade.php
-        return view('userpage', ["bbs" => $bbs]); // bbs.indexにデータを渡す
+        return view('userpage', ["bbs" => $bbs, "name" => $name]); // bbs.indexにデータを渡す
 
 	}
 }

@@ -1,3 +1,6 @@
+<head>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+</head>
 @if (Auth::check())<!-- エラーメッセージ。なければ表示しない -->
     @if ($errors->any())
     <ul>
@@ -9,14 +12,12 @@
 
     @include('header')
     <!-- フォームエリア -->
-    <h2>フォーム</h2>
     <form action="{{ url('/bbs') }}" method="POST" enctype="multipart/form-data" class="post_form">
         <div class="form_parts">
             <input type="file" name="image">
             <br>
     <!--         <input type="text" name="user"> -->
             <br>
-            <p>Comment:</p>
             <textarea name="comment" rows="4" cols="40" placeholder="Write a caption here!"></textarea>
             <br>
             {{ csrf_field() }}

@@ -18,14 +18,13 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -35,7 +34,7 @@
                     <ul class="navbar-nav mr-auto">
 
                     </ul>
-
+                    @include('header')
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
@@ -73,23 +72,7 @@
         </nav>
 
         <main class="py-4">
-            @if (Auth::check())
-            <nav class="navbar">
-                <ul>
-                    <li><a href="{{ url('/') }}">ホーム</a></li>
-                    <li><a href="{{ url('logout') }}">ログアウト</a></li>
-                    <li><a href="{{ url('post') }}">投稿</a></li>
-                </ul>
-            </nav>
-            @else
-            <nav class="navbar">
-                <ul>
-                    <li><a href="{{ url('/') }}">ホーム</a></li>
-                    <li><a href="{{ url('login') }}">ログイン</a></li>
-                    <li><a href="{{ url('login') }}">投稿</a></li>
-                </ul>
-            </nav>
-            @endif
+
             @yield('content')
         </main>
     </div>

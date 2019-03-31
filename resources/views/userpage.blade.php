@@ -1,22 +1,25 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>User page</title>
+    <title>{{ $name }}'s page</title>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
 
-<h1>Page of ~~</h1>
 @include('header')
+<div class="user-header">
+	<p id="icon">アイコン</p>
+	<p>Page of {{ $name }}</p>
+	<p>いいね合計数</p>
+</div>
 
-<p>{name}</p>
-<?php echo Auth::user()->name; ?>
+
+<div class="picture-container">
 @isset($bbs)
     @foreach ($bbs as $d)
-        <div>
-        	<h2>{{ $d->user_id }}さんの投稿</h2>
             <img src="data:image/png;base64,<?= $d->image ?>">
-        </div>
     @endforeach
 @endisset
+</div>
 </body>
 </html>

@@ -1,3 +1,6 @@
+<head>
+	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+</head>
 <!-- エラーメッセージ。なければ表示しない -->
 	@if ($errors->any())
 	<ul>

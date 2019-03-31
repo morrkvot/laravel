@@ -1,3 +1,6 @@
+<head>
+	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+</head>
 @if (Auth::check())
 <nav class="navbar">
 	<ul>

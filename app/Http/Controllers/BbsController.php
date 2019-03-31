@@ -52,4 +52,5 @@
           Bbs::find($request->id)->delete();
           return redirect('/bbs');
       }
+
    }

@@ -1,0 +1,108 @@
+body, html {
+	margin: 0;
+	padding: 0;
+}
+
+.user-header {
+	display: flex;
+	justify-content: space-around;
+	font-size: 20px;
+	align-items: center;
+}
+
+#icon {
+	border: solid 1px black;
+	padding: 25px;
+}
+
+.navbar {
+	background-color: lightgray;
+}
+.navbar ul {
+	display: flex;
+	list-style: none;
+	justify-content: space-around;
+	margin: 0;
+}
+
+.navbar ul li {
+	padding: 20px;
+}
+
+.navbar a {
+	color: #000;
+	text-decoration: none;
+}
+
+.post {
+	margin: 60px 20%;
+	padding: 20px 5%;
+	border: 2px solid #000;
+}
+
+.post img {
+	width:50%;
+	height: auto;
+}
+
+p.center {
+	text-align: center;
+}
+
+.post a {
+	text-decoration: none;
+	color: #000;
+}
+
+.pagination {
+	display: flex;
+	justify-content: center;
+}
+.pagination li {
+
+}
+
+.pagination li {
+	margin: 10px 20px;
+	padding: 5px;
+	border: gray solid 1px;
+	border-radius: 4px;
+	background-color: lightgray;
+	list-style: none;
+}
+
+.pagination li a {
+	text-decoration: none;
+	color: #000;
+}
+
+.form_parts {
+	margin: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.form_parts textarea {
+	width: 50%;
+	height: 200px
+}
+
+.form_parts button {
+	margin-top: 50px;
+	
+	padding: 30px 50px;
+}
+
+.picture-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+.picture-container img {
+	width: 32%;
+	height: 82%;
+	max-width: 100%;
+	margin: 2px;
+	border: 1px solid gray;
+}
