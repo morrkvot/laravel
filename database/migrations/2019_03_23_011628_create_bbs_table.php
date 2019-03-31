@@ -15,9 +15,9 @@ class CreateBbsTable extends Migration
     {
         Schema::create('bbs', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id'); 
+            $table->string('user_id'); 
             $table->string('comment'); 
-            $table->text('image'); // 画像に関する記述
+            $table->mediumtext('image'); // 画像に関する記述
             $table->timestamps();
         });
     }

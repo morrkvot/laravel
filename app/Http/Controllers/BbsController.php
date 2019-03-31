@@ -11,7 +11,7 @@
        // Indexページの表示
        public function index() {
 
-           $bbs = Bbs::Orderby('id', 'desc')->simplePaginate(5); // paginate into 5 per page.
+           $bbs = Bbs::Orderby('id', 'desc')->simplePaginate(10); // paginate into 10 per page.
            // $bbs = Bbs::all(); 
 
            return view('bbs.index', ["bbs" => $bbs]); // bbs.indexにデータを渡す
@@ -46,11 +46,21 @@
 
       }
 
-      //NOT DONE
-      public function delete (Request $request)
-      {
-          Bbs::find($request->id)->delete();
-          return redirect('/bbs');
-      }
 
+
+
+       public function delete()
+       {
+        $user = Auth::user()->id; //Gets logged in id.
+        $post = Bbs::where('user_id', $user)->first();  //
+
+        if($post) {
+
+            $delete = Bbs::delete()->$post;
+
+
+        return view('bbs/delete', $delete);
+
+       }
+     }
    }

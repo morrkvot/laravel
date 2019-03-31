@@ -27,8 +27,8 @@ class PostController extends Controller
            // バリデーションチェック
            $request->validate([
            		'user_id' => 'required',
-               'comment' => 'nullable|max:200',
-               'image' => 'required|file|image|max:60000|mimes:jpeg,png,gif',
+            	'comment' => 'nullable|max:200',
+            	'image' => 'required|file|image|max:60000|mimes:jpeg,png,gif',
            ]);
 
            // 投稿内容の受け取って変数に入れる
@@ -46,6 +46,7 @@ class PostController extends Controller
 
 
        }
+
 }
 
 

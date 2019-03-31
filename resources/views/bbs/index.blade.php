@@ -26,6 +26,7 @@
             <p class="center"><img src="data:image/png;base64,<?= $d->image ?>"></p>
             <p>{{ $d->comment }}</p>
             <br>
+<!--             <a href="{{ url('/bbsdelete/') }}">Delete</a> -->
         </div>
     @endforeach
 <!-- Used for next/previous button in pagination. Error when posting? -->

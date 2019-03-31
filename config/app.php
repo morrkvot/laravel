@@ -136,6 +136,8 @@ return [
 
     'providers' => [
 
+    
+
         /*
          * Laravel Framework Service Providers...
          */
@@ -165,6 +167,7 @@ return [
         /*
          * Package Service Providers...
          */
+        kanazaca\CounterCache\CounterCacheServiceProvider::class,
 
         /*
          * Application Service Providers...
